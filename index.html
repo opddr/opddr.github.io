@@ -10,20 +10,26 @@
 @font-face {
   font-family: "SDGothic";
   src: url("resources/ZEN-SERIF-TTF-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: #fff;
 }
 * {
   font-family: 'SDGothic', serif;
   line-height: 2;
+  color:#eeeeee;
 }
 .desc_image
 {
+
+	
+	
 	border-top-left-radius: 20px 20px;
 	border-top-right-radius: 20px 20px;
 }
 .echos_image
 {
-	padding:3%;
+	padding-top:3%;
+	padding-right:3%;
+	padding-left:3%;
 	background-color:#303030;
 	border-top-left-radius: 20px 20px;
 	border-top-right-radius: 20px 20px;
@@ -31,10 +37,13 @@
 
 .description
 {
+	padding-bottom:3%;
+	padding-right:3%;
+	padding-left:3%;
 	background-color:#303030;
 	border-bottom-right-radius: 20px 20px;
 	border-bottom-left-radius: 20px 20px;
-	padding:30px;
+	padding-lower:30px;
 }
 .facil_left
 {
@@ -151,13 +160,12 @@
 <body>
     <header>
         <div class="container">
-	<img class="logo" style="width:200px;height:200px;" src="images/logo.png"/>
-            <h1 style="font-size:90px;">PROJECT NOAH</h1>
+	<img class="logo" style="width:400px;height:400px;" src="images/logo.png"/>
         </div>
     </header>
 
     <nav>
-        <div class="container">
+        <div class="container" style="font-size:30px;">
             <ul>
                 <li><a href="#about">세계관</a></li>
                 <li><a href="#skills">주요시설</a></li>
@@ -170,11 +178,12 @@
 
     <div class="container">
         <section id="about">
-            <h2>세계관</h2>
-
-	<img class="desc_image" onclick="onClick(this)" width="100%" height="40%" src="images/utopia_complex.png"/>
-
-            <p class="description">
+            <h1>◈  세계관</h1>
+	<div class="echos_image">
+		<img class="desc_image" onclick="onClick(this)" width="100%" height="40%" src="images/utopia_complex.png"/>
+	</div>
+            <div class="description">
+<br/><br/>
 우리가 왜 이렇게 숨죽여 사는지, 그 이유부터 알아야겠지. 먼저 기억해. 지금은 2077년이야. 네가 기억하는 세상은 이제 없는 거지.
 
 모든 건 20년 전, 2057년에 시작됐어. 우리는 그해를 '대붕괴(The Great Collapse)'라고 불러. 갑자기 세상이 소리를 내는 모든 것을 증오하는 지옥으로 변했거든. 인류는 속수무책으로 무너졌고, 살아남은 극소수의 사람들은 이곳으로 필사적으로 도망친 거야.
@@ -190,35 +199,35 @@
         </section>
 
         <section id="skills">
-            <h2>주요시설</h2>
+            <h1>◈&nbsp;  주요시설</h1>
 
-             <h3>중앙 관제실</h3>
+             <h3>①&nbsp;&nbsp;  중앙 관제실</h3>
 	<div style="display: inline-block;display: flex;">
 		<img class="facil_left" onclick="onClick(this)" src="images/노아.webp">
 		<div class="facil_right" style="width:50%;text-align: center;">여긴 이 건물의 심장이자 뇌야. '노아'가 바로 여기서 모든 걸 통제하고 있지. 전력, 환기, 수자원, 그리고 우리의 목숨 줄인 식량 배급까지 전부. 최고 관리자 몇 명을 빼면 아무도 들어갈 수 없는 성역 같은 곳이야. 우리는 그저 '노아'가 벽에 달린 스피커로 내보내는 차가운 목소리를 들을 수 있을 뿐이지.</div>
 	</div>
 	
-             <h3>주거구역(상층)</h3>
+             <h3>②&nbsp;  주거구역(상층)</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">상층부는 과거에 부자들이 살던 펜트하우스를 개조한 곳이야. 깨끗한 물도, 전기도, 식량도 우선적으로 공급받지. 그들은 창문 너머로 우리를 내려다볼 뿐, 아래층의 비참함엔 관심도 없어.</div>
 		<img class="facil_right" onclick="onClick(this)" src="images/상층.png" width="50%" height="70%">
 	</div>
-             <h3>주거구역(하층)</h3>
+             <h3>③&nbsp;  주거구역(하층)</h3>
 	<div style="display: inline-block;display: flex;">
 		<img class="facil_left" onclick="onClick(this)" src="images/하층.png" width="50%" height="70%">
 		<div class="facil_right">면에 우리 대부분이 사는 하층부는... 그냥 닭장이라고 생각해. 좁고, 어둡고, 항상 재활용된 공기의 퀴퀴한 냄새가 나. 여기서 배급받는 식량만으로는 늘 배가 고프지. 그래서 다들 살아남으려고 뭐든 하는 거야.</div>
 	</div>
-             <h3>수경재배지</h3>
+             <h3>④&nbsp;  수경재배지</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">7층부터 10층까지, 건물 한가운데를 차지하는 거대한 녹색 공간이야. 인공 태양 아래서 자라는 식물들이 우리 모두를 먹여 살리고 있어. 그래서 여긴 이 방주에서 가장 중요한 곳이고, 가장 삼엄하게 경비가 이뤄지는 곳이기도 해. 식량 생산량을 속이거나 배급을 두고 싸움이라도 나면, 그땐 '메아리'보다 우리끼리 먼저 서로를 죽이게 될 테니까.</div>
 		<img class="facil_right" onclick="onClick(this)" src="images/수경재배지.jpg" width="50%" height="70%">
 	</div>
-             <h3>의료 구역</h3>
+             <h3>⑤&nbsp;  의료 구역</h3>
 	<div style="display: inline-block;display: flex;">
 		<img class="facil_left" onclick="onClick(this)" src="images/의료구역.png" width="50%" height="70%">
 		<div class="facil_right">과거에 상가에 있던 작은 병원을 개조해서 쓰고 있어. 하지만 '의료 구역'이라는 이름이 좀 무색하지. 의약품은 늘 부족하고, 제대로 된 수술 장비 같은 건 꿈도 못 꿔. 바깥에서 '고스트'가 목숨 걸고 약을 구해오지 않는 한, 여기서 심하게 다치거나 병에 걸린다는 건 그냥 죽음을 기다리는 것과 마찬가지야.</div>
 	</div>
-             <h3>서비스 통로</h3>
+             <h3>⑥&nbsp;  서비스 통로</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">여긴 공식 지도에는 없는 길이야. 환풍구나 배수관, 전력선이 거미줄처럼 얽혀있는 건물의 동맥이지. 어둡고, 좁고, 어디로 이어질지 아무도 몰라. 하지만 이곳이 바로 '고스트'들이 외부로 나갈 때 사용하는 유일한 통로야. 당연히 가장 위험한 곳이기도 해. 벽 너머에서 '메아리'들의 소리가 울려 퍼지기도 하고, 가끔은 길을 잃은 놈들이 이 안을 배회하기도 하거든. 정말 필요할 때가 아니면, 절대로 발을 들여선 안 되는 곳이라고.</div>
 		<img class="facil_right" onclick="onClick(this)" src="images/서비스통로.png" width="50%" height="70%">
@@ -228,32 +237,33 @@
         </section>
 
         <section id="projects">
-            <h2>메아리</h2>
+            <h1>◈ 메아리</h1>
 	<div class="echos_image" style="display: inline-block;display: flex;">
 		<img onclick="onClick(this)" src="images/메아리1.png" width="50%" height="50%">
 		<img onclick="onClick(this)" src="images/메아리2.png" width="50%" height="50%">
 	</div>
-<p  class="description">
+<div  class="description">
+<br/><br/>
 이제 우리가 무엇으로부터 숨어있는지 알려줄게. 그놈들의 이름은 '메아리(Echoes)'.
 
-놈들은 바이러스에 감염된 인간의 변이체야. 눈은 완전히 퇴화해서 보지 못하지만, 그 대신 신이 내린 저주와도 같은 청각을 가졌어. 평소엔 동면하듯 미동도 없지만, 아주 작은 소리라도 감지하는 순간, 그 근원지가 완전히 잠잠해질 때까지 파괴적으로 몰려드는 거지. 그리고 인간을 섭취하면서 계속해서 진화해.
+<b>놈들은 바이러스에 감염된 인간의 변이체</b>야. 눈은 완전히 퇴화해서 보지 못하지만, 그 대신 신이 내린 저주와도 같은 청각을 가졌어. 평소엔 동면하듯 미동도 없지만, 아주 작은 소리라도 감지하는 순간, 그 근원지가 완전히 잠잠해질 때까지 파괴적으로 몰려드는 거지. 그리고 인간을 섭취하면서 계속해서 진화해.
 
 단순히 소리만 쫓는 짐승으로 생각하면 큰 오산이야. 놈들은 아주 교활하고 치명적인 방식으로 사냥하거든.
 
-첫째, 소리를 훔치고 흉내 내. 놈들은 과거에 들었던 소리를 완벽하게 모방해. 죽은 네 친구의 목소리로 이름을 부르거나, 아기 울음소리를 내서 동정심에 문을 열게 만들지. 심리적으로 인간을 무너뜨리는 가장 잔인한 능력이야.
+<br/><br/>첫째, 소리를 훔치고 흉내 내. 놈들은 과거에 들었던 소리를 완벽하게 모방해. 죽은 네 친구의 목소리로 이름을 부르거나, 아기 울음소리를 내서 동정심에 문을 열게 만들지. 심리적으로 인간을 무너뜨리는 가장 잔인한 능력이야.
 
-둘째, 공명으로 모든 것을 파괴해. 놈들이 떼를 지어 함께 울부짖으면, 그 소리가 특정 주파수로 공명하면서 주변 구조물을 통째로 흔들어버려. 이 콘크리트 벽도 안심할 수 없어. 약해진 바닥이나 벽을 그대로 붕괴시켜 버리니까.
+<br/><br/>둘째, 공명으로 모든 것을 파괴해. 놈들이 떼를 지어 함께 울부짖으면, 그 소리가 특정 주파수로 공명하면서 주변 구조물을 통째로 흔들어버려. 이 콘크리트 벽도 안심할 수 없어. 약해진 바닥이나 벽을 그대로 붕괴시켜 버리니까.
 
-셋째, 네 안의 공포를 들어. 놈들은 초음파를 쏴서 주변을 탐지하는데, 특히 부상을 입어 거친 숨을 내쉬거나 공포에 질려 심장이 빠르게 뛰는 대상을 정확히 골라내. 약해진 자는 놈들의 최우선 목표물이 되는 거야.
+<br/><br/>셋째, 네 안의 공포를 들어. 놈들은 초음파를 쏴서 주변을 탐지하는데, 특히 부상을 입어 거친 숨을 내쉬거나 공포에 질려 심장이 빠르게 뛰는 대상을 정확히 골라내. 약해진 자는 놈들의 최우선 목표물이 되는 거야.
 
-이게 우리가 침묵해야 하는 이유의 전부야. 바깥 세상은 이 '메아리'라는 사냥꾼들이 지배하고 있어. '노아'가 지켜주는 이 방주 안이라도 소음을 내면, 그놈들은 결국 이 벽을 부수고 들어올 방법을 찾아내고 말 거라고. 그러니 명심해. 이곳에서 너의 가장 큰 적은 굶주림이나 갈증이 아니야. 바로 네가 무심코 내는 '소리' 그 자체라고.
+<br/><br/>이게 우리가 침묵해야 하는 이유의 전부야. 바깥 세상은 이 '메아리'라는 사냥꾼들이 지배하고 있어. '노아'가 지켜주는 이 방주 안이라도 소음을 내면, 그놈들은 결국 이 벽을 부수고 들어올 방법을 찾아내고 말 거라고. 그러니 명심해. 이곳에서 너의 가장 큰 적은 굶주림이나 갈증이 아니야. 바로 네가 무심코 내는 '소리' 그 자체라고.
 물론이지. 이 콘크리트 감옥이 어떻게 돌아가는지 알아야 살아남을 테니, 각 구역에 대해 잘 새겨들어. 여기가 이제 네 세상의 전부니까.
-</p>
+</div>
         </section>
 
 
         <section id="story">
-            <h2>스토리</h2>
+            <h1>◈  스토리</h1>
 		<div style="display: inline-block;display: flex;">
 		<img onclick="onClick(this)" src="images/thumbnail1.png" width="33%" height="50%" class="zoom">
 		<img onclick="onClick(this)" src="images/thumbnail2.png" width="33%" height="50%" class="zoom">
@@ -267,7 +277,7 @@
         </section>
 
         <section id="MV">
-            <h2>Music Video</h2>
+            <h1>◈  Music Video</h1>
 <iframe width="100%" height="500rem" src="https://www.youtube.com/embed/FFGCwHUmp0w?si=gFhQNA2vJ-_EWsNV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
