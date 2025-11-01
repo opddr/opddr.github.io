@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로필</title>
+
+
     <style>
+@font-face {
+  font-family: "SDGothic";
+  src: url("resources/ZEN-SERIF-TTF-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+* {
+  font-family: 'SDGothic', serif;
+}
 .zoom {
-
-padding:2%;
-
-border-radius:200px;
+  padding:2%;
+  border-radius:200px;
   transition: transform 1s;
   width:30%;
-
-  transition: 0.5s; /* Add this for smooth transition of height */
-  
+  transition: 0.5s; /* Add this for smooth transition of height */  
 }
 
 .zoom:hover {
-
-
-padding:0%;
- width:34%;
+	padding:0%;
+	width:34%;
 }
 
         body {
-            font-family: sans-serif;
-	font-size: 1.2rem;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -110,7 +112,6 @@ padding:0%;
     <header>
         <div class="container">
             <h1>PROJECT NOAH</h1>
-            <p>간단한 자기소개 또는 직무</p>
         </div>
     </header>
 
@@ -229,13 +230,14 @@ padding:0%;
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 당신의 이름. All Rights Reserved.</p>
+        <p>&copy; PROJECT NOAH. All Rights Reserved.</p>
     </footer>
 
 <script>
 function onClick(e)
 {	
-	window.open(e.src,'title',fullscreen='yes');
+	var featureWindow = "width=" + window.screen.width + ", height="+window.screen.height;
+	window.open(e.src,'title',featureWindow);
 }
 
 </script>
