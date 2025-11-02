@@ -12,6 +12,12 @@
   src: url("resources/ZEN-SERIF-TTF-Regular.ttf") format("truetype");
   font-weight: #fff;
 }
+:root {
+    --bgmbutton: #1a1a1e;
+    --bgmbutton-hover: 1a1a1e;
+    --text-ton: #f0f0f0;
+    --transition-ratio: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 * {
   font-family: 'SDGothic', serif;
 
@@ -51,14 +57,17 @@
 }
 .facil_right
 {
-	display : flex;  justify-content : center;  align-items : center;
 	width:50%;
-	padding-right:23px;
-	padding-top:23px;
-	padding-bottom:23px;
+	padding:23px;
 	background-color:#303030;
 	border-top-right-radius: 20px 20px;
-	border-bottom-right-radius: 20px 20px;	
+	border-bottom-right-radius: 20px 20px;
+}
+
+.facil_paragraph
+{
+	border--radius: 20px 20px;
+	
 }
 
 .zoom {
@@ -79,7 +88,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-	
             background: #1a1a1e;
         }
         .container {
@@ -154,12 +162,79 @@
             background: #333;
             color: #fff;
         }
+.bgm-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--bgmbutton);
+    border: 2px solid var(--bgmbutton-hover);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-ratio);
+    
+}
+
+.bgm-toggle:hover {
+    background: var(--bgmbutton-hover);
+    transform: scale(1.1);
+}
+
+.bgm-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-ton);
+}
+
+.bgm-toggle .icon-sound-on {
+    display: none;
+}
+
+.bgm-toggle.playing .icon-sound-off {
+    display: none;
+}
+
+.bgm-toggle.playing .icon-sound-on {
+    display: block;
+}
+    .bgm-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .bgm-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
     </style>
 </head>
 <body>
+    <!-- 배경음악 버튼 -->
+    <button id="bgmToggle" class="bgm-toggle" aria-label="배경음악 토글">
+        <svg class="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+    </button>
+
+    <audio id="bgm" loop>
+        <source src="resources/Utopia's Breath.mp3" type="audio/mpeg">
+    </audio>
 
    <header>
-<!--<audio controls src="resources/Utopia's Breath.mp3" style="position:absoulte;top:0;left:0;" ></audio>-->
 	<img class="logo" style="width:30%;height:30%;" src="images/logo.png"/>
     </header>
     <nav>
@@ -203,7 +278,7 @@
              <h3>①&nbsp;&nbsp;  중앙 관제실</h3>
 	<div style="display: flex;height:auto;">
 		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;height:auto;border-radius:3%" src="images/노아.webp"></div>
-		<div class="facil_right">여긴 이 건물의 심장이자 뇌야. '노아'가 바로 여기서 모든 걸 통제하고 있지. 전력, 환기, 수자원, 그리고 우리의 목숨 줄인 식량 배급까지 전부. 최고 관리자 몇 명을 빼면 아무도 들어갈 수 없는 성역 같은 곳이야. 우리는 그저 '노아'가 벽에 달린 스피커로 내보내는 차가운 목소리를 들을 수 있을 뿐이지.</div>
+		<div class="facil_right"><div class="facil_paragraph">여긴 이 건물의 심장이자 뇌야. '노아'가 바로 여기서 모든 걸 통제하고 있지. 전력, 환기, 수자원, 그리고 우리의 목숨 줄인 식량 배급까지 전부. 최고 관리자 몇 명을 빼면 아무도 들어갈 수 없는 성역 같은 곳이야. 우리는 그저 '노아'가 벽에 달린 스피커로 내보내는 차가운 목소리를 들을 수 있을 뿐이지.</div></div>
 	</div>
 	
              <h3>②&nbsp;  주거구역(상층)</h3>
@@ -263,14 +338,14 @@
         <section id="story">
             <h1>◈  스토리</h1>
 		<div style="display: inline-block;display: flex;">
-		<img onclick="onClick(this)" src="images/thumbnail1.png" width="33%" height="50%" class="zoom">
-		<img onclick="onClick(this)" src="images/thumbnail2.png" width="33%" height="50%" class="zoom">
-		<img onclick="onClick(this)" src="images/thumbnail3.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/0r7khw')" src="images/thumbnail1.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/g3urc8')" src="images/thumbnail2.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/im1qmt')" src="images/thumbnail3.png" width="33%" height="50%" class="zoom">
 		</div>
 		<div style="display: inline-block;display: flex;">
-		<img onclick="onClick(this)" src="images/thumbnail4.png" width="33%" height="50%" class="zoom">
-		<img onclick="onClick(this)" src="images/thumbnail5.png" width="33%" height="50%" class="zoom">
-		<img onclick="onClick(this)" src="images/thumbnail6.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/8boz3g')" src="images/thumbnail4.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/fbjtqv')" src="images/thumbnail5.png" width="33%" height="50%" class="zoom">
+		<img onclick="onclickpage('https://share.crack.wrtn.ai/gnjlqe')" src="images/thumbnail6.png" width="33%" height="50%" class="zoom">
 		</div>
         </section>
 
@@ -293,9 +368,24 @@ function onClick(e)
 
 function onclickpage(url)
 {
+	console.log(url);
 	window.open(url, '_blank').focus();
 }
+let isPlaying = false;
 
+bgmToggle.addEventListener('click', () => {
+    if (isPlaying) {
+        bgm.pause();
+        bgmToggle.classList.remove('playing');
+        isPlaying = false;
+    } else {
+        bgm.play().catch(err => {
+            console.log('음악 재생 실패:', err);
+        });
+        bgmToggle.classList.add('playing');
+        isPlaying = true;
+    }
+});
 </script>
 
 </body>
