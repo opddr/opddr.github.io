@@ -91,7 +91,6 @@
         header {
             background: #333;
             color: #fff;
-            padding: 1rem 0;
             text-align: center;
         }
         header h1 {
@@ -156,14 +155,13 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+   <header>
+        <div style="width:95%;overflow:hidden;">
 	<img class="logo" style="width:30%;height:30%;" src="images/logo.png"/>
         </div>
     </header>
-
     <nav>
-        <div class="container" style="font-size:30px;">
+        <div class="container" style="font-size:1rem">
             <ul>
                 <li><a href="#about">세계관</a></li>
                 <li><a href="#skills">주요시설</a></li>
@@ -201,34 +199,34 @@
 
              <h3>①&nbsp;&nbsp;  중앙 관제실</h3>
 	<div style="display: flex;">
-		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;height:100%;border-radius:3%" src="images/노아.webp"></div>
+		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;border-radius:3%" src="images/노아.webp"></div>
 		<div class="facil_right">여긴 이 건물의 심장이자 뇌야. '노아'가 바로 여기서 모든 걸 통제하고 있지. 전력, 환기, 수자원, 그리고 우리의 목숨 줄인 식량 배급까지 전부. 최고 관리자 몇 명을 빼면 아무도 들어갈 수 없는 성역 같은 곳이야. 우리는 그저 '노아'가 벽에 달린 스피커로 내보내는 차가운 목소리를 들을 수 있을 뿐이지.</div>
 	</div>
 	
              <h3>②&nbsp;  주거구역(상층)</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">상층부는 과거에 부자들이 살던 펜트하우스를 개조한 곳이야. 깨끗한 물도, 전기도, 식량도 우선적으로 공급받지. 그들은 창문 너머로 우리를 내려다볼 뿐, 아래층의 비참함엔 관심도 없어.</div>
-		<div class="facil_right"><img style="width:100%;height:100%;border-radius:3%" onclick="onClick(this)" src="images/상층.png" width="50%" height="70%"></div>
+		<div class="facil_right"><img style="width:100%;border-radius:3%" onclick="onClick(this)" src="images/상층.png" width="50%" height="70%"></div>
 	</div>
              <h3>③&nbsp;  주거구역(하층)</h3>
 	<div style="display: inline-block;display: flex;">
-		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;height:100%;border-radius:3%"  src="images/하층.png" width="50%" height="70%"></div>
+		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;border-radius:3%"  src="images/하층.png" width="50%" height="70%"></div>
 		<div class="facil_right">면에 우리 대부분이 사는 하층부는... 그냥 닭장이라고 생각해. 좁고, 어둡고, 항상 재활용된 공기의 퀴퀴한 냄새가 나. 여기서 배급받는 식량만으로는 늘 배가 고프지. 그래서 다들 살아남으려고 뭐든 하는 거야.</div>
 	</div>
              <h3>④&nbsp;  수경재배지</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">7층부터 10층까지, 건물 한가운데를 차지하는 거대한 녹색 공간이야. 인공 태양 아래서 자라는 식물들이 우리 모두를 먹여 살리고 있어. 그래서 여긴 이 방주에서 가장 중요한 곳이고, 가장 삼엄하게 경비가 이뤄지는 곳이기도 해.</div>
-		<div class="facil_right"><img style="width:100%;height:100%;border-radius:3%" onclick="onClick(this)" src="images/수경재배지.jpg" width="50%" height="70%"></div>
+		<div class="facil_right"><img style="width:100%;border-radius:3%" onclick="onClick(this)" src="images/수경재배지.jpg" width="50%" height="70%"></div>
 	</div>
              <h3>⑤&nbsp;  의료 구역</h3>
 	<div style="display: inline-block;display: flex;">
-		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;height:100%;border-radius:3%"  src="images/의료구역.png" width="50%" height="70%"></div>
+		<div class="facil_left"><img onclick="onClick(this)" style="width:100%;border-radius:3%"  src="images/의료구역.png" width="50%" height="70%"></div>
 		<div class="facil_right">'의료 구역'이라는 이름이 좀 무색하게 의약품은 늘 부족하고, 제대로 된 수술 장비 같은 건 꿈도 못 꿔. 바깥에서 '고스트'가 목숨 걸고 약을 구해오지 않는 한, 여기서 심하게 다치거나 병에 걸린다는 건 그냥 죽음을 기다리는 것과 마찬가지야.</div>
 	</div>
              <h3>⑥&nbsp;  서비스 통로</h3>
 	<div style="display: inline-block;display: flex;">
 		<div class="facil_left">여긴 공식 지도에는 없는 길이야. 환풍구나 배수관, 전력선이 거미줄처럼 얽혀있는 건물의 동맥이지. 어둡고, 좁고, 어디로 이어질지 아무도 몰라. 하지만 이곳이 바로 '고스트'들이 외부로 나갈 때 사용하는 유일한 통로야. 당연히 가장 위험한 곳이기도 해.</div>
-		<div class="facil_right"><img style="width:100%;height:100%;border-radius:3%" onclick="onClick(this)" src="images/서비스통로.png" width="50%" height="70%"></div>
+		<div class="facil_right"><img style="width:100%;border-radius:3%" onclick="onClick(this)" src="images/서비스통로.png" width="50%" height="70%"></div>
 	</div>
 
 
